@@ -20,5 +20,3 @@ class MobileApp(DigitalAsset, Reportable):
                 f"\ndate: {self.get_registration_date}, \ncost: {self.get_cost},\naverage raring: {self.__avg_rating} "
                 f"\ndownloads: {self.__downloads},"
                 f"\ncurrent value: {self.calculate_value()}")
-
-

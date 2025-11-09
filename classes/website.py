@@ -3,8 +3,9 @@ import datetime
 from classes.digital_asset import DigitalAsset
 from classes.reportable import Reportable
 
+
 class Website(DigitalAsset, Reportable):
-    def __init__(self, name: str, cost: float, monthly_traffic:int,monetization_rate:float):
+    def __init__(self, name: str, cost: float, monthly_traffic: int, monetization_rate: float):
         super().__init__(name, cost)
         self.__monthly_traffic = monthly_traffic
         self.__monetization_rate = monetization_rate
@@ -23,5 +24,5 @@ class Website(DigitalAsset, Reportable):
                 f"\ncurrent value: {self.calculate_value()}")
 
 
-d = Website("hagay",123.3,213,213)
+d = Website("hagay", 123.3, 213, 213)
 print(d.to_report_line())
