@@ -18,10 +18,7 @@ class Website(DigitalAsset, Reportable):
         return value
 
     def to_report_line(self):
-        return (f"type: {self.asset_type()},\nname: {self.get_name}, "
-                f"\ndate: {self.get_registration_date}, \ncost: {self.get_cost},\nmovement: {self.__monthly_traffic} "
-                f"\nmonetization: {self.__monetization_rate},"
-                f"\ncurrent value: {self.calculate_value()}")
+        return f"type: {self.asset_type()},name: {self.get_name}, date: {self.get_registration_date}, cost: {self.get_cost},movement: {self.__monthly_traffic}, monetization: {self.__monetization_rate},current value: {self.calculate_value()},"
 
 
 d = Website("hagay", 123.3, 213, 213)

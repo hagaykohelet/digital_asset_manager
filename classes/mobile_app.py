@@ -16,7 +16,4 @@ class MobileApp(DigitalAsset, Reportable):
         return value
 
     def to_report_line(self):
-        return (f"type: {self.asset_type()},\nname: {self.get_name}, "
-                f"\ndate: {self.get_registration_date}, \ncost: {self.get_cost},\naverage raring: {self.__avg_rating} "
-                f"\ndownloads: {self.__downloads},"
-                f"\ncurrent value: {self.calculate_value()}")
+        return f"type: {self.asset_type()},name: {self.get_name}, date: {self.get_registration_date}, cost: {self.get_cost},average raring: {self.__avg_rating}, downloads: {self.__downloads},current value: {self.calculate_value()},"
